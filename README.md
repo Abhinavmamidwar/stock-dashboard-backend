@@ -1,24 +1,21 @@
-📊 Stock Analytics Dashboard – Backend
+# 📊 Stock Analytics Dashboard – Backend
 
-This repository contains the backend service for the Stock Analytics Dashboard. It provides REST APIs to fetch, process, and serve stock market data using FastAPI and integrates with Yahoo Finance (yfinance) for real-time data.
+This is the **backend service** for the Stock Analytics Dashboard project.  
+It is built with **FastAPI** and integrates with **Yahoo Finance** to fetch stock market data.  
+It also supports authentication and caching for efficient API performance.
 
-🚀 Features
+---
 
-🔑 Authentication system (auth.py)
+## 🚀 Features
+- 📈 Fetch real-time and historical stock data from Yahoo Finance  
+- 🔒 Authentication support  
+- ⚡ Fast and lightweight API with FastAPI  
+- 🗂️ Caching utilities for performance  
+- 🛠️ Pydantic models and dependency injection  
 
-📈 Stock data fetching via yfinance_client.py
+---
 
-⚡ FastAPI framework for building APIs (main.py)
-
-🛠️ Dependency management (deps.py)
-
-🗄️ Data caching for performance (app/cache.py)
-
-📑 Models and schemas for structured responses (app/models.py)
-
-🏗️ Project Structure
-
-## 🏗️ Project Structure  
+## 🏗️ Project Structure
 
 ```bash
 backend/
@@ -34,52 +31,47 @@ backend/
 │── .gitignore
 │── LICENSE
 │── README.md
-
-
+```
 ⚙️ Setup Instructions
+
 1️⃣ Clone the repository
-git clone https://github.com/your-username/stock-dashboard-backend.git
+```bash
+git clone https://github.com/Abhinavmamidwar/stock-dashboard-backend.git
 cd stock-dashboard-backend
+```
 
-2️⃣ Create a virtual environment
+2️⃣ Create and activate virtual environment
+```bash
 python -m venv venv
-source venv/bin/activate    # On Linux/Mac
-venv\Scripts\activate       # On Windows
-
+source venv/bin/activate   # On Linux/Mac
+venv\Scripts\activate      # On Windows
+```
 3️⃣ Install dependencies
+```bash
 pip install -r requirements.txt
-
+```
 4️⃣ Setup environment variables
-
-Create a .env.local file in the root directory:
-
-SECRET_KEY=your_secret_key_here
-ALGORITHM=HS256
-ACCESS_TOKEN_EXPIRE_MINUTES=30
-
-
-(Add any other keys required for your authentication or APIs.)
-
+Create a .env.local file in the root directory and configure:
+```bash
+SECRET_KEY=your_secret_key
+API_KEY=your_api_key   # if required
+```
 5️⃣ Run the backend server
+```bash
 uvicorn main:app --reload
+```
 
-
-The API will be available at:
+Backend will run at:
 👉 http://127.0.0.1:8000
 
-📌 API Endpoints
-Method	Endpoint	Description
-GET	/	Health check
-POST	/auth/login	User login (JWT-based)
-GET	/stocks/{ticker}	Fetch stock data from Yahoo
-GET	/cache/status	Cache info
+📌 API Documentation
 
-(Extend this table with your actual endpoints.)
+Once the server is running, you can access:
 
-🧪 Running Tests
-pytest
+Swagger UI → http://127.0.0.1:8000/docs
 
-📜 License
+ReDoc → http://127.0.0.1:8000/redoc
 
-This project is licensed under the MIT License – see the LICENSE
- file for details.
+📄 License
+
+This project is licensed under the MIT License.
