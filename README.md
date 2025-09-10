@@ -17,6 +17,10 @@ This repository contains the backend service for the Stock Analytics Dashboard. 
 📑 Models and schemas for structured responses (app/models.py)
 
 🏗️ Project Structure
+
+## 🏗️ Project Structure  
+
+```bash
 backend/
 │── app/
 │   ├── cache.py          # Cache utilities
@@ -30,6 +34,7 @@ backend/
 │── .gitignore
 │── LICENSE
 │── README.md
+
 
 ⚙️ Setup Instructions
 1️⃣ Clone the repository
