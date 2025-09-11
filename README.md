@@ -53,12 +53,11 @@ pip install -r requirements.txt
 4️⃣ Setup environment variables
 Create a .env.local file in the root directory and configure:
 ```bash
-SECRET_KEY=your_secret_key
-API_KEY=your_api_key   # if required
+NEXT_PUBLIC_BACKEND_API_URL=http://localhost:8000
 ```
 5️⃣ Run the backend server
 ```bash
-uvicorn main:app --reload
+uvicorn app.main:app --reload
 ```
 
 Backend will run at:
